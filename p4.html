@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <!-- <h1>
+    given a set of strings,find the longest common prefix 
+    Input:("apple","ape","April")
+  </h1> -->
+  <script>
+    function longestCommonPrefix(strings) {
+    if (strings.length === 0) return '';
+
+    let prefix = strings[0];
+
+    for (let i = 1; i < strings.length; i++) {
+        while (strings[i].indexOf(prefix) !== 0) {
+            prefix = prefix.substring(0, prefix.length - 1);
+            if (prefix === '') return '';
+        }
+    }
+
+    return prefix;
+}
+
+// Input
+const result = longestCommonPrefix(["apple", "ape", "april"]);
+console.log(result); // Output: "ap"
+
+  </script>
+</body>
+</html>

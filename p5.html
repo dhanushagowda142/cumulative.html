@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+ <script>
+        function sub(str) {
+         str = str.toLowerCase();
+
+        const charSet = new Set();
+
+         for (let char of str) {
+            if (char >= 'a' && char <= 'z') {
+              charSet.add(char); 
+           }
+       }
+
+      return charSet.size === 26;
+    }
+
+    const str = "The quick brown fox jumps over the lazy dog";
+    console.log(sub(str));
+ </script>
+</body>
+</html>
